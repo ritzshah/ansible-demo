@@ -17,6 +17,7 @@
   yum:
     name: "{{ item }}" 
     state: absent
+    skip_broken: yes
   with_items:
     - haproxy
     - tomcat
