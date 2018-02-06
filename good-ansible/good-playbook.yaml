@@ -19,7 +19,6 @@
 - name: deploy httpd
   hosts: apps
   roles:
-  - httpd
   - tomcat
 
 - name: Smoke Test
