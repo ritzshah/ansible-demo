@@ -26,7 +26,7 @@
   tasks:
   - name: test if app is reachable
     uri: 
-      url: "http://{{ hostvars[inventory_hostname].ansible_ssh_host }}/"
+      url: "http://192.168.56.5"
       return_content: yes
     delegate_to: localhost  
     register:  smoke
