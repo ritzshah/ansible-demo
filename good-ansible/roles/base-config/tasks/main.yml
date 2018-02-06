@@ -5,3 +5,9 @@
       src: open_three-tier-app.repo
       dest: /etc/yum.repos.d/open_three-tier-app.repo
       mode: 0644
+
+- name: disable os firewall - firewalld
+  systemd:
+    name: firewalld
+    state: stopped
+    enabled: no
