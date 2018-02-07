@@ -10,6 +10,9 @@
     tags:
       - smoke
 
+  - name: Show Web Page
+    debug: msg="{{ smoke }}"
+
   - name: check the smoke return page content
     assert:
      that: "'Ansible has done its job - Welcome to Tomcat' in smoke.content" 

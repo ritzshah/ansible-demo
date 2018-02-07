@@ -20,3 +20,10 @@
     skip_broken: yes
   with_items:
     - postgresql-server
+
+- name: Clean artifact path
+  file:
+    state: absent
+    path: /var/lib/pgsql/data
+  tags:
+    - delfile
