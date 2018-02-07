@@ -1,0 +1,22 @@
+---
+# Initial, common, system setup steps
+
+- name: reverse the enabling of sudo without tty for some ansible commands
+  replace:
+    path: /etc/sudoers
+    regexp: 'Defaults\s*!requiretty'
+    replace: '^Defaults requiretty'
+    backup: yes
+
+- name: disable repos
+  template:
+    src: /dev/null
+    dest: /etc/yum.repos.d/open_three-tier-app.repo
+
+- name: remove db packages
+  yum:
+    name: "{{ item }}" 
+    state: absent
+    skip_broken: yes
+  with_items:
+    - postgresql-server

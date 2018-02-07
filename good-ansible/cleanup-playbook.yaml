@@ -1,5 +1,15 @@
 ---
-- name: Cleanup 3 Tier Configuration
-  hosts: all
+- name: Cleanup db Configuration
+  hosts: db1
   roles:
-  - cleanup
+  - cleanup-db
+
+- name: Cleanup App Configuration
+  hosts: apps
+  roles:
+  - cleanup-app
+
+- name: Cleanup Web Configuration
+  hosts: frontends
+  roles:
+  - cleanup-web

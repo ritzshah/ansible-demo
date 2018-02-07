@@ -22,7 +22,7 @@
   - tomcat
 
 - name: Smoke Test
-  hosts: frontends
+  hosts: apps
   tasks:
   - name: test if app is reachable
     uri: 
