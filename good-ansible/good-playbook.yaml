@@ -5,7 +5,7 @@
   - base-config
 
 - name: delploy postgresql
-  hosts: appdbs
+  hosts: db1
   roles:
   - postgresql
 
