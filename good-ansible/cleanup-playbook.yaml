@@ -1,0 +1,5 @@
+---
+- name: Cleanup 3 Tier Configuration
+  hosts: all
+  roles:
+  - cleanup
