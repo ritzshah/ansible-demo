@@ -11,25 +11,25 @@ ansible_ssh_common_args="-o StrictHostKeyChecking=no"
 [3tierapp:children]
 frontends
 apps
-appdbs
+db1
 support
 
 
 [frontends]
 ## These are the frontends
 #frontend1.7458.internal ansible_ssh_host=frontend1.7458.example.opentlc.com
-rhel-web
+web1
 
 [apps]
 ## These are the apps
 #app1.7458.internal ansible_ssh_host=app1.7458.example.opentlc.com
 #app2.7458.internal ansible_ssh_host=app2.7458.example.opentlc.com
-rhel-app
+app1
 
-[appdbs]
+[db1]
 ## These are the appdbs
 #appdb1.7458.internal ansible_ssh_host=appdb1.7458.example.opentlc.com
-rhel-db
+db1
 
 ## These are the support
 [support]
