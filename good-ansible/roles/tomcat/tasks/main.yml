@@ -19,6 +19,6 @@
 
   - name: Start tomcat
     service:
-      name: tomcat
+      name: "{{ service_name }}"
       state: started
       enabled: true
