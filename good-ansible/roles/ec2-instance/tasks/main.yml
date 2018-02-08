@@ -1,0 +1,14 @@
+---
+# tasks file for roles/ec2-instance
+- ec2:
+    key_name: aws
+    instance_type: t2.micro
+    image: ami-e60e5a89
+    wait: yes
+    wait_timeout: 500
+    count: 1
+    instance_tags:
+       type: app1
+    monitoring: yes
+    vpc_subnet_id: subnet-bac062f7
+    assign_public_ip: yes
