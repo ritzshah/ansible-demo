@@ -1,6 +1,6 @@
 ---
 - name: Cleanup db Configuration
-  hosts: appdb
+  hosts: db
   roles:
   - cleanup-db
 
@@ -10,6 +10,6 @@
   - cleanup-app
 
 - name: Cleanup Web Configuration
-  hosts: frontend
+  hosts: frontends
   roles:
   - cleanup-web
