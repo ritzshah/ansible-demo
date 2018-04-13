@@ -5,12 +5,12 @@
   - base-config
 
 - name: delploy postgresql
-  hosts: db1
+  hosts: appdb
   roles:
   - postgresql
 
 - name: Deploy haproxy
-  hosts: frontends
+  hosts: frontend
   roles:
   - haproxy
   tags:
